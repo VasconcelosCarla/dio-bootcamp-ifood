@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha de CSS</title>
+    <!--CSS Externo-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--CSS interno-->
+    <style>
+        /*seletor por tipo/tag*/
+        h1{
+            background: red;
+            color: white;
+        }
+        h2{
+            background: blue;
+            color: white;
+        }
+        div{
+            background:lightblue;
+            color: white;
+        }
+        li{
+            background: lightgreen;
+        }
+        /*seletor por ID*/
+        #texto-boas-vindas{
+            background: red;
+            color: white;
+        }
+        #Explicacao-seletores{
+            background: rgb(86, 38, 177);
+            color: white;
+        }
+        /*seletor por Classes*/
+        .seletores-mais-comuns{
+            color: rgb(2, 32, 22);
+        }
+        .texto-maiusculo{
+            text-transform: uppercase;
+        }
+
+        /*seletor universal*/
+        *{
+            font-weight: bold;
+        }
+
+        /*seletor Atributos*/
+        [title="Netflix"]{
+            background: red;
+        }
+        [title="Spotify"]{
+            background: rgb(36, 163, 108);
+        }
+        [title~="Streaming"]{
+            background: red;
+        }
+        [title|="Streaming"]{
+            background: red;
+        }
+        [href^="https://"]{ /*pra prefixo*/
+            background: lightgreen;
+        }
+        [href$="login"]{ /*pra sufixo*/
+            background: lightgreen;
+        }
+        [href*="login"]{ /*pra procurar em todo valor a ocorrencia da palavra*/
+            background: lightgreen;
+        }
+        /*Agrupamento de seletores usando o ou (,)*/
+        h1, p, div{
+            color:green;
+        }
+        .texto, h1, #link-referenica{
+            color:lightsalmon;
+        }
+        h1, [id^="botao"]{
+            background: lightgray;
+        }
+        /*Agrupamento de seletores usando e ou ()*/
+        .texto.novo{
+            color:lightsalmon;
+        }
+       
+    </style>
+</head>
+<body>
+    <!--CSS inline-->
+    <h1 style="background: red; color: white;">
+        DIO - Digital Innovation One
+    </h1>
+
+    <h2>
+        Carla Vasconcelos
+    </h2>
+    
+    
+    <h1>Seletores CSS</h1>
+    <p id="texto-boas-vindas">Bem-vindo!</p>
+    <p id="Explicacao-seletores">No Css nós possuímos os Seletores por ID</p>
+    <div>
+        <ul>
+            <li class="seletores-mais-comuns texto-maiusculo"><b>Seletor Tipo: </b>Busca Elementos por uma tag HTML</li>
+            <li class="seletores-mais-comuns texto-maiusculo"><b>Seletor por ID (#): </b>Busca Elementos atraves do "id"</li>
+            <li class="seletores-mais-comuns"><b>Seletor Classe (.): </b>Busca Elementos atraves da "class"</li>
+            <li><b>Seletor Universal (*): </b>Seleciona todos os elementos <b>HTML</b></li>
+            <li class="texto-maiusculo"><b>Seletor Atributo ([atrib]): </b>Seleciona elementos que possuem um atributo específico em nosso documento HTML e conseguimos também buscar atributos com valor específico</li>
+        </ul>
+    </div>
+    
+
+    <!--Exemplo para o seletor por atributo-->
+    <div>
+        <ul>
+            <li>
+                <a title="Netflix" href="#">Netlix</a>
+            </li>
+            <li>
+                <a title="Prime Streaming" href="#">Prime</a>
+            </li>
+            <li>
+                <a title="Spotify" href="#">Spotify</a>
+            </li>
+            <li>
+                <a title="Streaming-Disney" href="#">Disney</a>
+            </li>
+
+        </ul>
+    </div>
+    <!--Agrupamento de seletores-->
+    <h1>--Agrupamento de Seletores</h1>
+    <p class="texto">Podemos aplicar regras CSS para vários seletores diferentes. Usando a Vírgula</p>
+    <div class="texto">Assim, não precisamos ficar copiando e colando os mesmos códigos para tosos , nós podemos dazer um bloco de CSS e reutilizar as mesmas regras!</div>
+    <br><br>
+
+    <a id="link-referencia" href="#">clique para ver a documentação</a>
+    <br><br>
+    <a class="novo" id="link-suporte" href="#">clique para entrar em contato com o suporte</a>
+    <br><br>
+    <a id="botao-voltar" href="#">voltar</a>
+    <br><br>
+    <button id="botao-fechar">Fechar Página</button>
+
+    <!--Combinadores descendente-->
+</body>
+</html>
